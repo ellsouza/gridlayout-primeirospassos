@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    border: 3px dotted green;
+}
+
+.container {
+    display: grid;
+    border: 3px dotted blue;
+    color: black;
+    gap: 5px;
+    align-items: normal;
+    justify-items: normal;
+    align-content: space-evenly;
+    justify-content: normal;
+    padding: 20px;
+    grid-template-rows: 80px 80px 80px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 80px;
+    grid-auto-columns: 80px;
+    place-items: normal normal;
+    place-content: normal normal;
+
+}
+
+.item {
+    display: grid;
+    border: 3px dotted red;
+    padding: 5px;
+    text-align: center;
+}
+
+#a{
+    background-color: red;
+    grid-row-start: 1;
+    grid-row-end:1;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+#b{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end:3;
+    background-color: chartreuse;
+}
+#c{
+grid-row-start: 2;
+grid-row-end: 4;
+grid-column-start: 3;
+grid-column-end: 3;
+background-color: yellow;
+}
+#d{
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start:1;
+    grid-column-end:4;
+    background-color: lightblue;
+}
+
+
+
+/* 
+"grid: track" serve para a linha ou coluna que esteja completa de itens, do começo ao fim;
+track deitada: row track;
+track em pé: column track;
+temos os grid lines, podendo ser horizontais ou verticais, da esquerda pra direita;
+os grid items são os items dentro do grid container;
+"grid: area": conjunto de grid items, tanto na vertical, quanto na horizontal;
+grid gap: espaço entre os items;
+"place-items" e "place-content" para juntar align e justify, inicio: align / fim: justify;
+
+*/
